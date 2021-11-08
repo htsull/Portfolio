@@ -11,23 +11,62 @@
 </head>
 
 <body>
-    <div class="openMenu" onclick='openMenu();'>
-        <span><ion-icon name="menu"></ion-icon></span>
-    </div>
-    <div class="closeMenu" onclick='closeMenu();'>
-        <span><ion-icon name="close"></ion-icon></span>
+    <header>
+        <div class="logo"><a href="#">berthony sully</a></div>
+        <div class="toggle" onclick="openMenu();">
+            <span><ion-icon name="menu"></ion-icon></span>
+        </div>
+    </header>
+    <section class="banner">
+        <div class="imgSidebar">
+            <img src="photos.png" alt="">
+            <ul class="social">
+                <li>
+                    <a href="#">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="contentBx">
+            <h5 class="logoText">My Profile</h5>
+            <div>
+                <h4><span>Hello</span>, I'm</h4>
+                <h2>Berthony Sully</h2>
+                <h4>I'm a data Scientist.</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos in natus cumque hic vitae voluptas quisquam praesentium optio, deleniti ipsa perspiciatis mollitia. Ullam quod perferendis, expedita corporis delectus doloremque adipisci. Laborum
+                    enim deleniti tempora porro totam libero odit? Itaque excepturi asperiores corrupti ratione alias omnis voluptate, quas modi distinctio officia ea harum ducimus non ipsam qui quia maxime? Iste, velit?</p>
+                <a href="#" class="btn">About Me</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="sideBar" onclick="openMenu();">
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
     </div>
 
 
     <script>
         function openMenu() {
-            const openToggle = document.querySelector('.openMenu');
-            openToggle.classList.toggle('inactive');
-        }
-
-        function closeMenu() {
-            const closeToggle = document.querySelector('closeMenu');
-            closeToggle.classList.toggle('active');
+            const openToggle = document.querySelector('.toggle');
+            const sidebar = document.querySelector('.sideBar');
+            openToggle.classList.toggle('active');
+            sidebar.classList.toggle('active');
         }
     </script>
 </body>
